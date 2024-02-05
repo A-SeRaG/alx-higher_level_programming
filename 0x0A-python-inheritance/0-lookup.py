@@ -5,7 +5,7 @@ def lookup(obj):
     '''function looks up attributes and methods of an object
     Args:
         obj: object to list
-    Return:
+    Returns:
         list: list of attributes
     '''
     return dir(obj)
