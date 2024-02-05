@@ -2,10 +2,10 @@
 '''Module for lookup method'''
 
 def lookup(obj):
-    '''function looks up attributes and methods of an object
+    '''function looks up attributes and methods of an object.
     Args:
-        obj: object to list
+        obj (object): object to list.
     Returns:
-        list: list of attributes
+        list: list of attributes.
     '''
     return dir(obj)
