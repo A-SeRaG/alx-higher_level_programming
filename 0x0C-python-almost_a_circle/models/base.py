@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-'''Module of Base class.'''
+'''Module for Base class.'''
 
 class Base:
-    '''Base class.'''
+    '''A representation of the base of our OOP hierachy.'''
 
     __nb_objects = 0
 
