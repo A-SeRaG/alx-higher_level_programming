@@ -95,3 +95,4 @@ class Rectangle (Base):
             self.__update(*args)
         elif kwargs:
             self.__update(**kwargs)
+
