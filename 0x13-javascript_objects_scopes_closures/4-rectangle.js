@@ -21,13 +21,11 @@ class Rectangle {
     let a = this.height;
     this.height = this.width;
     this.width = a;
-    this.print();
   }
 
   double () {
     this.height = 2 * this.height;
     this.width = 2 * this.width;
-    this.print();
   }
 }
 
