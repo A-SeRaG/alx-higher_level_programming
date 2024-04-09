@@ -6,3 +6,5 @@ class Rectangle {
     this.name = name;
   }
 }
+
+module.exports = Rectangle;
