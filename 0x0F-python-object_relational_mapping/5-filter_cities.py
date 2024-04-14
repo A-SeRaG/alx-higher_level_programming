@@ -16,7 +16,7 @@ if __name__ == "__main__":
               WHERE states.name LIKE BINARY %(s_name)s \
               ORDER BY cities.id ASC", {'s_name': sys.argv[4]})
     ss = c.fetchall()
-    for s in ss:
-        print(s)
+    if ss:
+        print(", ".join([s[1] for s in ss]))
     c.close()
     con.close()
