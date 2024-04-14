@@ -17,3 +17,5 @@ if __name__ == "__main__":
     ss = c.fetchall()
     for s in ss:
         print(s)
+    c.close()
+    con.close()
