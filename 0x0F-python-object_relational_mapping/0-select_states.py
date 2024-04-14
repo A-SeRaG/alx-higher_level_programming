@@ -14,4 +14,4 @@ if __name__ == "__main__":
     for s in ss:
         print(s)
     c.close()
-    db.close()
+    con.close()
