@@ -4,4 +4,4 @@ if [ $# -ne 1 ]; then
     exit 1
 fi
 response=$(curl -s -w "%{size_download}" -o /dev/null $1)
-echo "Size of the response body: $response bytes"
+echo "$response"
