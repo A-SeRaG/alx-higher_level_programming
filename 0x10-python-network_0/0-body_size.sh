@@ -1,7 +1,3 @@
 #!/bin/bash
-if [ $# -ne 1 ]; then
-    echo "Usage: $0 <URL>"
-    exit 1
-fi
-response=$(curl -s -w "%{size_download}" -o /dev/null $1)
-echo "$response"
+# Bash script that displays the size of the body of the response
+curl -s "$1" | wc -c
