@@ -7,6 +7,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
+
 if __name__ == "__main__":
     # Get MySQL credentials and database name from command line arguments
     usrname = sys.argv[1]
@@ -17,6 +18,7 @@ if __name__ == "__main__":
     engine = create_engine(db, pool_pre_ping=True)
     # Create a configured "Session" class
     Session = sessionmaker(bind=engine)
+    Base.metadata.create_all(engine)
     # Create a Session
     session = Session()
 
@@ -28,6 +30,6 @@ if __name__ == "__main__":
         print(f"{state.id}: {state.name}")
     else:
         print("Nothing")
-    
+
     # Close the session
     session.close()
