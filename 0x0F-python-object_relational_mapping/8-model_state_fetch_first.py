@@ -16,14 +16,14 @@ if __name__ == "__main__":
     db = (f'mysql+mysqldb://{usrname}:{passw}@localhost:3306/{dbname}')
     # Create a connection to the MySQL server
     engine = create_engine(db, pool_pre_ping=True)
+    Base.metadata.create_all(engine)
     # Create a configured "Session" class
     Session = sessionmaker(bind=engine)
-    Base.metadata.create_all(engine)
     # Create a Session
     session = Session()
 
     # Query the first State object
-    state = session.query(State).order_by(State.id).first()
+    state = session.query(State).first()
 
     # Display the result
     if state:
