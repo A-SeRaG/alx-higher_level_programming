@@ -7,7 +7,7 @@ from sys import argv
 from urllib import request, error
 
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     url = argv[1]
 
     try:
